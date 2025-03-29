@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Vacinas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Agendamento de Vacinas</h2>
+
+        <form id="agendamentoForm" class="mb-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <input type="text" id="paciente" class="form-control" placeholder="Paciente" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="funcionario" class="form-control" placeholder="Funcionário Responsável" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" id="vacinaAplicada" class="form-control" placeholder="Vacina" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="dose" class="form-control" placeholder="Dose" required min="1">
+                </div>
+                <div class="col-md-2">
+                    <input type="date" id="dataAgendada" class="form-control" required>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-success">Agendar</button>
+                </div>
+            </div>
+        </form>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Funcionário</th>
+                    <th>Paciente</th>
+                    <th>Vacina</th>
+                    <th>Dose</th>
+                    <th>Data Agendada</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaAgendamentos"></tbody>
+        </table>
+
+        <a href="salaVacinasEstoque.html" class="btn btn-secondary mt-3">Voltar para Estoque</a>
+        <a href="salaVacinaAplicacao.html" class="btn btn-secondary mt-3">Ir para Aplicação</a>
+    </div>
+
+    <script src="scriptSalaVacina.js"></script>
+</body>
+</html>
